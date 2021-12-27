@@ -6,10 +6,16 @@
 public class GraphPoint implements Comparable<GraphPoint>{
     private final String mName;
     private int mDistance;
+    private String mPath;
 
-    public GraphPoint(String name, int distance){
+    public String getPath() {
+        return mPath;
+    }
+
+    public GraphPoint(String name, int distance, String path){
         mName = name;
         mDistance =distance;
+        mPath = path;
     }
 
     public String getName() {

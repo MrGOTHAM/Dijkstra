@@ -7,7 +7,9 @@ import java.util.ArrayList;
  */
 public class PointPathAndExtent {
     public StringBuffer[] mPath;
-    public ArrayList<GraphPoint> mExtent = new ArrayList<>();
+    public static ArrayList<GraphPoint> mExtent = new ArrayList<>();
+    public static ArrayList point = new ArrayList();
+    public static int[] visited = new int[5];
 
     public PointPathAndExtent() {
         initPath();
