@@ -14,17 +14,34 @@ import java.util.Scanner;
 public class Test {
 
     public static void main(String[] args) {
-       Scanner inputStream = null;
-       try {
-           inputStream = new Scanner(new FileInputStream("D:\\csv\\节点.csv"), String.valueOf(StandardCharsets.UTF_8));
-       } catch (FileNotFoundException e) {
-           e.printStackTrace();
-           System.out.println("File is not found");
-       }
-        for (int i = 0; i < 10; i++) {
-            System.out.println(inputStream.nextLine());
-        }
+        String filePathPoint = "D:\\csv\\节点.csv";
+        String filePathRoad = "D:\\csv\\链路.csv";
+        String filePathBusiness = "D:\\csv\\业务.csv";
+        Scanner inputStreamRoad, inputStreamPoint, inputStreamBusiness;
 
-        inputStream.close();
+        try {
+            inputStreamRoad = new Scanner(new FileInputStream(filePathRoad), "GBK");
+            inputStreamBusiness = new Scanner(new FileInputStream(filePathBusiness), "GBK");
+            inputStreamPoint = new Scanner(new FileInputStream(filePathPoint), "GBK");
+            String line;
+            while (inputStreamRoad.hasNext()) {
+                line = inputStreamRoad.nextLine();
+                System.out.println(line);
+            }
+            inputStreamRoad.close();
+            while (inputStreamBusiness.hasNext()){
+                line = inputStreamBusiness.nextLine();
+                System.out.println(line);
+            }
+            inputStreamBusiness.close();
+            while (inputStreamPoint.hasNext()){
+                line = inputStreamPoint.nextLine();
+                System.out.println(line);
+            }
+            inputStreamPoint.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("File is not found");
+        }
     }
 }
