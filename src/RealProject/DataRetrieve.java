@@ -16,7 +16,8 @@ import java.util.Scanner;
 public class DataRetrieve {
     private Scanner mInputStream;
     private String mLine;
-    private final String mRegex = "\t";
+//    private final String mRegex = "\t";
+    private final String mRegex = ",";
 
     /**
      * 路径带宽邻接矩阵， 路径花费邻接矩阵，
@@ -31,7 +32,7 @@ public class DataRetrieve {
         initNodeData();
         initMatrices();
         initLinkData();
-        initBusinessData();
+//        initBusinessData();
 
     }
 

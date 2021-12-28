@@ -13,4 +13,11 @@ public class Node {
         mRegionId = regionId;
     }
 
+    public int getRegionId() {
+        return mRegionId;
+    }
+
+    public int getNodeId() {
+        return mNodeId;
+    }
 }
