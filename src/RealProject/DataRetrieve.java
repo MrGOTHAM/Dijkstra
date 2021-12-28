@@ -32,7 +32,7 @@ public class DataRetrieve {
         initNodeData();
         initMatrices();
         initLinkData();
-//        initBusinessData();
+        initBusinessData();
 
     }
 
@@ -75,14 +75,14 @@ public class DataRetrieve {
             mLinkBandwidth[Integer.parseInt(s[0])][Integer.parseInt(s[1])] = Integer.parseInt(s[2]);
         }
         mInputStream.close();
-        for (int i = 0; i < mNodes.size(); i++) {
-            for (int j = 0; j < mNodes.size(); j++) {
-                System.out.print("    带宽：：" + mLinkBandwidth[i][j] + "  代价" + mLinkPrice[i][j]);
-                if (j == mNodes.size() - 1) {
-                    System.out.println();
-                }
-            }
-        }
+//        for (int i = 0; i < mNodes.size(); i++) {
+//            for (int j = 0; j < mNodes.size(); j++) {
+//                System.out.print("    带宽：：" + mLinkBandwidth[i][j] + "  代价" + mLinkPrice[i][j]);
+//                if (j == mNodes.size() - 1) {
+//                    System.out.println();
+//                }
+//            }
+//        }
     }
 
     private void initBusinessData() throws FileNotFoundException {

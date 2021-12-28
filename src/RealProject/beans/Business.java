@@ -18,5 +18,19 @@ public class Business {
         mBusinessSinkNodeId = businessSinkNodeId;
     }
 
+    public int getBusinessId() {
+        return mBusinessId;
+    }
 
+    public int getSourceNodeId() {
+        return mSourceNodeId;
+    }
+
+    public int getBusinessSinkNodeId() {
+        return mBusinessSinkNodeId;
+    }
+
+    public int getBandwidthNeeded() {
+        return mBandwidthNeeded;
+    }
 }
